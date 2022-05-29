@@ -4,7 +4,7 @@ import MealItem from "../components/MealItem";
 import { MEALS, CATEGORIES } from "../data/dummy-data";
 
 export default function MealsOverview({ route, navigation }) {
-  const categoryId = route.params.categoryId;
+  const categoryId = route?.params?.categoryId || "c1";
 
   const mealData = MEALS.filter((meal) => {
     return meal.categoryIds.indexOf(categoryId) >= 0;
