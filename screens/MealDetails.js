@@ -12,7 +12,7 @@ import List from "../components/MealDetail/List";
 import SubTitle from "../components/MealDetail/SubTitle";
 import { MEALS } from "../data/dummy-data";
 export default function MealDetails({ route, navigation }) {
-  const id = route.params.mealId;
+  const id = route?.params?.mealId || "m1";
   const mealData = MEALS.find((meal) => meal.id === id);
   function onPressHandler() {
     console.log("Hello");
